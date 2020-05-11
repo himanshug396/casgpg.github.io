@@ -1,0 +1,108 @@
+{% extends "webapp/base.html" %}
+{% load static %}
+{% block content %}
+<!-- Query body -->
+<div class="query-body">
+    <p class="heading" style="text-align: center;">Query</p>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="name">Name<span style="color: red;">*</span></label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="text" name="name" id="name" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="desig">Designation</label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="text" name="desig" id="desig">
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="org">Organization</label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="text" name="org" id="org"><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="oadd">Office Address</label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="text" name="oadd" id="oadd"><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="city">City<span style="color: red;">*</span></label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="text" name="city" id="city" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="emailid">Email ID<span style="color: red;">*</span></label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="email" name="emailid" id="emailid" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="tnum">Telephone Number(Office)</label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="text" name="tnum" id="tnum" minlength="8"><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="mob">Mobile Number<span style="color: red;">*</span></label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="text" name="mob" id="mob" placeholder="(10 digits)" required ><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="tnum">Subject of Query<span style="color: red;">*</span></label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="text" name="subq" id="subq" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label>Other Professional updates</label>
+            </div>
+            <div class="col-8 col-md-6">
+                <input type="radio" id="yes" name="updates" style="width: 16px;" value="YES">
+                <label for="yes" style="text-align: left; width: auto;">YES</label>
+                <input type="radio" id="no" name="updates" style="width: 16px; margin-left: 24px;" value="NO">
+                <label for="no" style="text-align: left; width: auto;">NO</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-4">
+                <label for="query">Query<span style="color: red;">*</span></label>
+            </div>
+            <div class="col-8 col-md-6">
+                <textarea name="about_query" id="about_query" cols="50" rows="4" required></textarea>
+
+            </div>
+        </div>
+        <div class="row" style="margin-top: 24px;">
+            <button class="btn btn-primary" style="font-family: Open Sans; margin: auto;">Submit</button>
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}
