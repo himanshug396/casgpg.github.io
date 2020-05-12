@@ -1,0 +1,17 @@
+{% extends "webapp/base.html" %}
+{% load static %}
+{% block content %}
+<div class="service-body">
+    <p class="heading">What's new</p>
+    <ul style="list-style-type: none;" id="view-list">
+        {% for date in dates %}
+        <li style="font-weight: 600; color: #222222;"> {{date}}</li>
+        {% for list in date.news_set.all %}
+        <li style="font-size: 14px;"><img src="{% static 'webapp/images/right-arrow.svg' %}" alt=""><a href="{{list.url}}">{{list.news}}</a> </li>
+        {% endfor %}
+        <br>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}

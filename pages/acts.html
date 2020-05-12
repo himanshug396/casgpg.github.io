@@ -1,0 +1,26 @@
+{% extends "webapp/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="service-body">
+    <p class="heading">Acts</p>
+    <p>Link to various Acts has been provided below:</p>
+    <ul class="service-list" style="list-style-type:none">
+        <li style="font-weight: 600;">Direct Tax :</li>
+        <ul class="service-list" style="list-style-type: none;">
+            <li> <img src="{% static 'webapp/images/link-icon.svg' %}" alt=""> <a target="_blank" href="https://www.incometaxindia.gov.in/pages/acts/income-tax-act.aspx">Income Tax</a> </li>
+        </ul>
+        <li> <img src="{% static 'webapp/images/link-icon.svg' %}" alt=""> <a target="_blank" href="http://www.cbic.gov.in/htdocs-cbec/customs/cs-acts-botm">Custom Act</a> </li>
+        <li> <img src="{% static 'webapp/images/link-icon.svg' %}" alt=""> <a target="_blank" href="http://www.cbic.gov.in/htdocs-cbec/excise/cx-act/cx-act-idx">Central Excise Act</a> </li>
+        <li> <img src="{% static 'webapp/images/link-icon.svg' %}" alt=""> <a target="_blank" href="http://cbic.gov.in/htdocs-cbec/gst/index">GST</a> </li>
+        <li style="font-weight: 600;">VAT Act :</li>
+        <ul class="service-list" style="list-style-type: none;">
+            <li><img src="{% static 'webapp/images/link-icon.svg' %}" alt="">  <a target="_blank" href="https://dvat.gov.in/website/home.html">Delhi</a> </li>
+            <li><img src="{% static 'webapp/images/link-icon.svg' %}" alt="">  <a target="_blank" href="https://pextax.com/PEXWAR/appmanager/pexportal/PunjabExcise">Punjab</a> </li>
+            <li><img src="{% static 'webapp/images/link-icon.svg' %}" alt="">  <a target="_blank" href="https://haryanatax.gov.in/HEX/appmanager/HexPortal/HaryanaExcise">Haryana</a> </li>
+        </ul>
+        <li><img src="{% static 'webapp/images/link-icon.svg' %}" alt="">  <a target="_blank" href="http://mca.gov.in/MinistryV2/companiesact2013.html">Companies Act</a></li>
+        <li><img src="{% static 'webapp/images/link-icon.svg' %}" alt="">  <a target="_blank" href="http://mca.gov.in/MinistryV2/llpact.html">LLP Act</a> </li>
+    </ul>
+</div>
+{% endblock %}

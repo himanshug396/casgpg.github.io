@@ -1,0 +1,36 @@
+{% extends "webapp/base.html" %}
+{% load static %}
+{% block content %}
+<div class="team-page">
+    <p class="heading" style="margin-bottom: 16px; text-align: center;">Our Team</p>
+        <p class="team-about">Our team consists of highly skilled, Qualified, committed professionals specialize in their
+        respective fields. Our professionalism and expertise helps us to  service our clients to their
+        satisfaction. Our team consists of two partners and other qualified and semi-qualified staff
+        members.</p>
+</div>
+{% for member in team_member %}
+<div class="team-page" style="margin-top: 0px; padding-top: 0px;">
+        <div class="row" style="margin: 0px;">
+                <div class="col-lg-2 col-sm-4">
+                    <img src="{% static 'webapp/images/team-photo.png' %}" style="width: 128px; height: 128px;" alt="">
+                </div>
+            <div class="col-lg-4 col-sm-8" style="padding: 16px">
+                <p class="team-name">{{member.name}}</p>
+                <p class="degree">{{member.degree}}</p>
+                <ul style="list-style-type: none; padding-left: 0px;">
+                    <li><img src="{% static 'webapp/images/mail.svg' %}" alt=""> <span class="team-contact">{{member.email_id}}</span></li>
+                    <li><img src="{% static 'webapp/images/phone.svg' %}" alt=""> <span class="team-contact">{{member.phone_number}}</span></li>
+                </ul>
+            </div>
+        </div>
+            <p class="member-about">{{member.about}}</p>
+            <ul class="member-about">
+                {% for field in member.areaofexpertise_set.all %} 
+                    <li>{{field.field_of_expertise}}</li>
+                {% endfor %}
+            </ul>
+        <br><hr><br>
+    
+</div>
+{% endfor %}
+{% endblock %}
