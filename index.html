@@ -1,80 +1,78 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>SGPG Associates</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	
-
-	<link href="logo2.png" type="image/ico" rel="shortcut icon">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-	<link rel="stylesheet" href="index.css">
-
-	<style type="text/css">
-	
-	html {
-		height: 100%;
-		overflow: hidden;
-	}
-
-	body {
-		height:100%;
-		overflow: auto;
-		-webkit-overflow-scrolling: touch;
-	}
-	
-	body{
-		height:100%;
-		background: #111 url('bg1.jpg'); no-repeat center bottom fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-
-
-	</style>
-</head>
-<body>
-	<div class="overlay"></div>
-<div class="wrap vertical-align">
-  <div class="content ">
-    <h1><img src="logo2.png" width="250px"></h1>
-<!--     <p>SGPG Associates </p> -->
-    <h1>SGPG<span style="color:#fb0;"> Associates </span></h1>
-    <p>Website is <strong>under construction.</strong></p>
-<!--     <div class="input-group input-group-lg">
-				  <input id="emailadd" name="emailadd" type="email" placeholder="Subscribe here..." class="form-control" required />
-      <span class="input-group-btn">
-      <button id="btn-ok" class="btn btn-warning">OK!</button>
-      </span>
-    </div> -->
-				
-				<div class="content-connect">
-
-					Please contact us for any Queries.
-					<br><br>
-					<i class="fa fa-envelope"></i> &nbsp;himanshugupta.396@gmail.com
-					<br>
-					<i class="fa fa-phone"></i> &nbsp;+91-&nbsp;9569191889
-
-				</div>
- 			
-<!--     <ul class="social list-inline">
-      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-    </ul> -->
-  </div>
-
+{% extends "webapp/base.html" %}
+{% load static %}
+{% block content %}
+<!--intro -->
+<div class="intro">
+    <div class="intro-text">
+        <p class="intro-heading">Welcome to <br> SGPG & ASSOCIATES</p>
+        <p class="intro-content">We aim to provide best solutions in the field of <br> Auditing & Assurance Services and to delivering <br> quality solutions in Professionalism and <br> time-bound manner.</p>
+    </div>
 
 </div>
-	</body>
-</html>
+<!--main-body-->
+<div class="main-body">
+    <div class="row">
+        <div class="service col-lg-9">
+            <p class="heading">  We render professional services in various field: </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>Statutory Audits</li>
+                          <li> Internal Audits</li>
+                          <li>Project Financing & statutory compliances</li>
+                          <li> Direct and Indirect Taxation </li>
+                          <li> Litigation matters</li>
+                          <li> ROC Compliances </li>
+                          
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul>
+                      <li> Accounting & Payroll</li>
+                      <li> Outsourcing Services </li>
+                      <li> Bank Audits </li>
+                      <li> Business Tax Planning and Financial Planning Services</li> 
+                      <li> Company Formation & Business Setup Services</li> 
+                      <li>New business set-up & system implementation</li> 
+                      <li>Management consulting & other allied services</li>      
+                  </ul>
+              </div>
+            </div>
+        </div>  
+          <div class="whats-new col-lg-3">
+              <div style="width: 100%; height: 32px;">
+                <p style="float: left; margin-bottom: 0px;"class="heading">What's New</p>
+                <p style="float: right;"> <a href="/home/viewall" target="_blank" style="font-size: 14px;">View All</a> </p>
+              </div> 
+                <div class="holder">
+                    <ul id="ticker01">
+                        {% for date in dates %}
+                        <li style="font-weight: 600; color: #222222;"> {{date}}</li>
+                        {% for list in date.news_set.all %}
+                        <li style="font-size: 14px;"><img src="{% static 'webapp/images/right-arrow.svg' %}" alt=""><a href="{{list.url}}" target="_blank">{{list.news}}</a> </li>
+                        {% endfor %}
+                        <hr>
+
+                        {% endfor %}
+                    </ul>
+
+                </div>
+            </div>
+    </div>
+</div>
+<div class="mobile-footer">
+    <p class="heading" style="color: #ffffff; margin-bottom: 8px;">Contact Us</p>
+    <p style="font-size: 14px; margin-bottom: 4px;"><img class="footer-icon" src="{% static 'webapp/images/mobile-footer/mail.svg' %}" alt="" style="margin-right: 6px;">{{info.email_3}}</p>
+    <p style="font-size: 14px; margin-bottom: 4px;"><img class="footer-icon" src="{% static 'webapp/images/mobile-footer/phone.svg' %}" alt="" style="margin-right: 6px;">{{info.phone}}</p>
+    <p style="margin-top: 12px;">Follow us</p>
+    <ul style="list-style-type: none; justify-content: space-between; display: flex; padding: 0px 124px;">
+        <li><a href="{{social.li_url}}" target="_blank"><img class="footer-icon" src="{% static 'webapp/images/mobile-footer/linkedin.svg' %}" alt=""> </a> </li>
+        <li><a href="{{social.fb_url}}" target="_blank"><img class="footer-icon" src="{% static 'webapp/images/mobile-footer/facebook.svg' %}" alt=""> </a> </li>
+        <li><a href="{{social.twitter_url}}" target="_blank"><img class="footer-icon" src="{% static 'webapp/images/mobile-footer/twitter.svg' %}" alt=""> </a> </li>
+    </ul>
+    <p style="font-size: 12px;">Copyrights © All Rights Reserved</p>
+
+
+</div>       
+{% endblock %}
 
