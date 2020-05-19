@@ -1,6 +1,121 @@
-{% extends "webapp/base.html" %}
-{% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SGPG Associates</title>
+    <link rel="icon" href="../images/icon.ico" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!--Top information bar-->
+<div class="mobile-top-nav">
+    <a href="/" class="logo"><img src="../images/mobile-logo.png"></a> 
+    <div style="display: inline-block;">
+        <p style="text-align: center;margin-bottom: 0px;font-weight: bold; font-size: 16px;">SGPG & ASSOCIATES</p>
+        <p style="text-align: center;margin-bottom: 0px;font-size: 12px; color: #1a5072; font-weight: 600;">Your perfection is our success</p>
+    </div>
+        
+        <div class="menu-toggle-mobile"></div>
+            <nav>
+                <ul>
+                    <li><a class="navbtn" href="../index.html">Home</a></li>
+                    <li><a class="navbtn" href="team.html">Team</a></li>
+                    <li> 
+                    <button id="services" onclick="servicesF()">Services <img src="../images/arrow-down.svg" alt=""></button>
+                        <div class="dropdown-content-mobile" id="services-d">
+                        <a href="services/audit-and-assurance.html">Audit and Assurance Services</a>
+                        <a href="services/tax-advisory.html">Direct and Indirect Tax Advisory</a>
+                        <a href="services/corporate.html">Corporate Services</a>
+                        <a href="services/accountancy-and-allied.html">Accountancy and Allied services</a>
+                        <a href="services/financial.html">Financial Services  </a>
+                        <a href="services/outsourcing.html">Outsourcing Services </a>   
+                        <a href="services/support-services.html">Support Services</a>
+                        </div>
+                    </li>
+                    <li>
+                            <button id="links" onclick="linksF()">Links<img src="../images/arrow-down.svg" alt=""></button>
+                        <div class="dropdown-content-mobile" id="links-d">
+                            <a href="links/imp.html">Important Links</a>
+                            <a href="links/income-tax.html">Income Tax Links</a>
+                            <a href="links/ministry-of-corporate.html">Ministry of Corporate Affairs</a>
+                            <a href="links/others.html">Others</a>
+                        </div></li>
+                <li><a class="navbtn" href="acts.html">Acts</a></li>
+                <li><a class="navbtn" href="rules.html">Rules</a></button></li>
+               <!--
+                   <li><a class="navbtn" href="career.html">Career</a></li>
+                    <li> <a class="navbtn" href="query.html">Query</a></li>
+                --> 
+                <li><a class="navbtn" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+    
+</div>
+
+<div class="top">
+    <div class="top-info">
+        <ul class="left">
+            <li style="margin-left: 0px;"><img src="../images/mail.svg" alt=""> <span style="height: 18px; width: 112px; margin-left: 6px;">sgpgassociates@gmail.com</span> </li>
+            <li><img src="../images/phone.svg" alt=""> <span style="height: 18px; width: 112px; margin-left: 6px;">+91-9999131756</span> </li>
+        </ul>
+        <ul class="right">
+            <li>Follow us:</li>
+            <li>
+            <ul>
+                <li><a href="" target="_blank"><img src="../images/instagram.svg" alt=""> </a> </li>
+                <li><a href="" target="_blank"><img src="../images/linkedin.svg" alt=""> </a> </li>
+                <li><a href="" target="_blank"><img src="../images/fb.svg" alt=""> </a> </li>
+            </ul>
+            </li>
+        </ul>            
+    </div>
+    <hr>
+    <div class="top-nav">
+        <a href="/" class="logo"><img src="../images/logo.png" style="width: 320px; height: 68px; margin: 0px;"></a>  
+        <div class="menu-toggle"></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li> 
+                        <div class="dropdown">
+                        <a id="s01">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services/audit-and-assurance.html">Audit and Assurance Services</a>
+                            <a href="services/tax-advisory.html">Direct and Indirect Tax Advisory</a>
+                            <a href="services/corporate.html">Corporate Services</a>
+                            <a href="services/accountancy-and-allied.html">Accountancy and Allied services</a>
+                            <a href="services/financial.html">Financial Services  </a>
+                            <a href="services/outsourcing.html">Outsourcing Services </a>   
+                            <a href="services/support-services.html">Support Services</a>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a id="l01">Links</a>
+                        <div class="dropdown-content">
+                            <a href="links/imp.html">Important Links</a>
+                            <a href="links/income-tax.html">Income Tax Links</a>
+                            <a href="links/ministry-of-corporate.html">Ministry of Corporate Affairs</a>
+                            <a href="links/others.html">Others</a>
+                        </div>
+                        </div></li>
+                        <li><a href="acts.html">Acts</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <!--<li><a href="career.html">Career</a></li>
+                <li><a href="queries.html">Query</a></li>-->
+                <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+           <div class="clearfix"></div>
+    </div>
+
+    
+</div>
 <div class="team-page">
     <p class="heading" style="margin-bottom: 16px; text-align: center;">Our Team</p>
         <p class="team-about">Our team consists of highly skilled, Qualified, committed professionals specialize in their
@@ -8,29 +123,67 @@
         satisfaction. Our team consists of two partners and other qualified and semi-qualified staff
         members.</p>
 </div>
-{% for member in team_member %}
 <div class="team-page" style="margin-top: 0px; padding-top: 0px;">
         <div class="row" style="margin: 0px;">
                 <div class="col-lg-2 col-sm-4">
-                    <img src="{% static 'webapp/images/team-photo.png' %}" style="width: 128px; height: 128px;" alt="">
+                    <img src="../images/team-photo.png" style="width: 128px; height: 128px;" alt="">
                 </div>
             <div class="col-lg-4 col-sm-8" style="padding: 16px">
-                <p class="team-name">{{member.name}}</p>
-                <p class="degree">{{member.degree}}</p>
+                <p class="team-name">CA PANKAJ GUPTA</p>
+                <p class="degree">B.com(H), ACA</p>
                 <ul style="list-style-type: none; padding-left: 0px;">
-                    <li><img src="{% static 'webapp/images/mail.svg' %}" alt=""> <span class="team-contact">{{member.email_id}}</span></li>
-                    <li><img src="{% static 'webapp/images/phone.svg' %}" alt=""> <span class="team-contact">{{member.phone_number}}</span></li>
+                    <li><img src="../images/mail.svg" alt=""> <span class="team-contact">capankajgupta2015@gmail.com</span></li>
+                    <li><img src="../images/phone.svg" alt=""> <span class="team-contact">+91-9999131756</span></li>
                 </ul>
             </div>
         </div>
-            <p class="member-about">{{member.about}}</p>
+            <p class="member-about">He is an associate member of the Institute of Chartered Accountants of India since 2015. He has also qualified certified course in Forensic Audit (FAFD) & Goods & Services Tax (GST) from ICAI.
+                 He has 4.5 years of experience in the profession. His area of expertise includes :</p>
             <ul class="member-about">
-                {% for field in member.areaofexpertise_set.all %} 
-                    <li>{{field.field_of_expertise}}</li>
-                {% endfor %}
+                <li>Bank Audits</li> 
+                <li>Company Law Compliances & Matters</li>
+                <li>Incorporation of new company</li>
+                <li>Corporate and non-corporate audits</li>
+                <li>Corporate and non-corporate taxation</li>
+                <li>Goods & Service tax ( GST ) matters</li>
+                <li>Income tax planning and assessments</li>
+                <li>Due diligence</li>
+                <li>Valuation</li>
+                <li>Financial Reviews</li>
+                <li>Loan Proposal</li>
+                <li>Special Assignments</li>
             </ul>
         <br><hr><br>
-    
+
+        <div class="row" style="margin: 0px;">
+            <div class="col-lg-2 col-sm-4">
+                <img src="../images/team-photo.png" style="width: 128px; height: 128px;" alt="">
+            </div>
+        <div class="col-lg-4 col-sm-8" style="padding: 16px">
+            <p class="team-name">CA SUNIL GUPTA</p>
+            <p class="degree">B.com, ACA</p>
+            <ul style="list-style-type: none; padding-left: 0px;">
+                <li><img src="../images/mail.svg" alt=""> <span class="team-contact">casunilgupta508@gmail.com</span></li>
+                <li><img src="../images/phone.svg" alt=""> <span class="team-contact">+91-9968243623</span></li>
+            </ul>
+        </div>
+    </div>
+        <p class="member-about">He is an associate member of the Institute of Chartered Accountants of India since 2018. 
+            He has 2 years of experience in the profession. His area of expertise includes :</p>
+        <ul class="member-about">
+            <li>Internal Audits</li> 
+            <li>Start up schemes Compliances</li>
+            <li>Assistance to Corporate’s funding</li>
+            <li>Project Report for loan appraisal</li>
+            <li>Fixed Asset Management,</li>
+            <li>Company law compliances</li>
+            <li>Corporate and non-corporate audits,            </li>
+            <li>Corporate and non-corporate taxation</li>
+            <li>Goods & Service tax ( GST ) matters</li>
+            <li>Income tax planning and assessments</li>
+            <li>Due diligence.</li>
+        </ul>
+    <br><hr><br>   
 </div>
-{% endfor %}
-{% endblock %}
+</body>  
+</html>

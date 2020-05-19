@@ -1,12 +1,3 @@
-{% load static %}
-{% include 'webapp/messages.html' %}
-{% block content %}
-{% endblock %}
-<div class="footer">
-    <p>Copyrights All Rights Reserved</p>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
 $(document).ready(function(){
     $('.menu-toggle').click(function(){
         $('.menu-toggle').toggleClass('active')
@@ -70,6 +61,3 @@ function linksF() {
 $(function(){
     $("ul#ticker01").liScroll();
 });
-</script>
-</body>  
-</html>
