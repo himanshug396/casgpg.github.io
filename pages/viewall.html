@@ -1,17 +1,132 @@
-{% extends "webapp/base.html" %}
-{% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SGPG Associates</title>
+    <link rel="icon" href="./images/icon.ico" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!--Top information bar-->
+<div class="mobile-top-nav">
+    <a href="index.html" class="logo"><img src="./images/mobile-logo.png"></a> 
+    <div style="display: inline-block;">
+        <p style="text-align: center;margin-bottom: 0px;font-weight: bold; font-size: 16px;">SGPG & ASSOCIATES</p>
+        <p style="text-align: center;margin-bottom: 0px;font-size: 12px; color: #1a5072; font-weight: 600;">Your perfection is our success</p>
+    </div>
+        
+        <div class="menu-toggle-mobile"></div>
+            <nav>
+                <ul>
+                    <li><a class="navbtn" href="index.html">Home</a></li>
+                    <li><a class="navbtn" href="pages/team.html">Team</a></li>
+                    <li> 
+                    <button id="services" onclick="servicesF()">Services <img src="./images/arrow-down.svg" alt=""></button>
+                        <div class="dropdown-content-mobile" id="services-d">
+                        <a href="pages/services/audit-and-assurance.html">Audit and Assurance Services</a>
+                        <a href="pages/services/tax-advisory.html">Direct and Indirect Tax Advisory</a>
+                        <a href="pages/services/corporate.html">Corporate Services</a>
+                        <a href="pages/services/accountancy-and-allied.html">Accountancy and Allied services</a>
+                        <a href="pages/services/financial.html">Financial Services  </a>
+                        <a href="pages/services/outsourcing.html">Outsourcing Services </a>   
+                        <a href="pages/services/support-services.html">Support Services</a>
+                        </div>
+                    </li>
+                    <li>
+                            <button id="links" onclick="linksF()">Links<img src="./images/arrow-down.svg" alt=""></button>
+                        <div class="dropdown-content-mobile" id="links-d">
+                            <a href="pages/links/imp.html">Important Links</a>
+                            <a href="pages/links/income-tax.html">Income Tax Links</a>
+                            <a href="pages/links/ministry-of-corporate.html">Ministry of Corporate Affairs</a>
+                            <a href="pages/links/others.html">Others</a>
+                        </div></li>
+                <li><a class="navbtn" href="pages/acts.html">Acts</a></li>
+                <li><a class="navbtn" href="pages/rules.html">Rules</a></button></li>
+               <!--
+                   <li><a class="navbtn" href="pages/career.html">Career</a></li>
+                    <li> <a class="navbtn" href="pages/query.html">Query</a></li>
+                --> 
+                <li><a class="navbtn" href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+    
+</div>
+
+<div class="top">
+    <div class="top-info">
+        <ul class="left">
+            <li style="margin-left: 0px;"><img src="./images/mail.svg" alt=""> <span style="height: 18px; width: 112px; margin-left: 6px;">sgpgassociates@gmail.com</span> </li>
+            <li><img src="./images/phone.svg" alt=""> <span style="height: 18px; width: 112px; margin-left: 6px;">+91-9999131756</span> </li>
+        </ul>
+        <ul class="right">
+            <li>Follow us:</li>
+            <li>
+            <ul>
+                <li><a href="" target="_blank"><img src="./images/twitter.svg" alt=""> </a> </li>
+                <li><a href="" target="_blank"><img src="./images/linkedin.svg" alt=""> </a> </li>
+                <li><a href="" target="_blank"><img src="./images/fb.svg" alt=""> </a> </li>
+            </ul>
+            </li>
+        </ul>            
+    </div>
+    <hr>
+    <div class="top-nav">
+        <a href="index.html" class="logo"><img src="./images/logo.png" style="width: 320px; height: 68px; margin: 0px;"></a>  
+        <div class="menu-toggle"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/team.html">Team</a></li>
+                    <li> 
+                        <div class="dropdown">
+                        <a id="s01">Services</a>
+                        <div class="dropdown-content">
+                            <a href="pages/services/audit-and-assurance.html">Audit and Assurance Services</a>
+                            <a href="pages/services/tax-advisory.html">Direct and Indirect Tax Advisory</a>
+                            <a href="pages/services/corporate.html">Corporate Services</a>
+                            <a href="pages/services/accountancy-and-allied.html">Accountancy and Allied services</a>
+                            <a href="pages/services/financial.html">Financial Services  </a>
+                            <a href="pages/services/outsourcing.html">Outsourcing Services </a>   
+                            <a href="pages/services/support-services.html">Support Services</a>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a id="l01">Links</a>
+                        <div class="dropdown-content">
+                            <a href="pages/links/imp.html">Important Links</a>
+                            <a href="pages/links/income-tax.html">Income Tax Links</a>
+                            <a href="pages/links/ministry-of-corporate.html">Ministry of Corporate Affairs</a>
+                            <a href="pages/links/others.html">Others</a>
+                        </div>
+                        </div></li>
+                        <li><a href="pages/acts.html">Acts</a></li>
+                <li><a href="pages/rules.html">Rules</a></li>
+                <!--<li><a href="pages/career.html">Career</a></li>
+                <li><a href="pages/queries.html">Query</a></li>-->
+                <li><a href="pages/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+           <div class="clearfix"></div>
+    </div>
+
+    
+</div>
 <div class="service-body">
     <p class="heading">What's new</p>
     <ul style="list-style-type: none;" id="view-list">
-        {% for date in dates %}
         <li style="font-weight: 600; color: #222222;"> {{date}}</li>
-        {% for list in date.news_set.all %}
-        <li style="font-size: 14px;"><img src="{% static 'webapp/images/right-arrow.svg' %}" alt=""><a href="{{list.url}}">{{list.news}}</a> </li>
-        {% endfor %}
+        <li style="font-size: 14px;"><img src="../images/right-arrow.svg" alt=""><a href="">lorem ipsum</a> </li>
         <br>
-        {% endfor %}
     </ul>
 
 </div>
-{% endblock %}
+<div class="footer">
+    <p>Copyrights All Rights Reserved</p>
+</div>
+</body>  
+</html>
