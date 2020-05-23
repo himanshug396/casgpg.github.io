@@ -8,6 +8,10 @@ body{
 margin:  0px;
 padding: 0px;
 overflow-y: scroll;
+height: 100%;
+position: relative;
+height: auto;
+min-height: 100%;
 }
 
 /* footer */
@@ -21,6 +25,7 @@ overflow-y: scroll;
     padding: 8px;
     position: absolute;
     width: 100%;
+    bottom:0;
 }
 .footer p{
     margin: 0px;
@@ -379,7 +384,7 @@ form .row{
 /* Services */
 .service-body{
     padding: 64px 164px 64px 164px;
-    margin-top: 108px;
+    padding-top: 172px;
     height: 100%;
 }
 .service-list li{
@@ -410,8 +415,8 @@ form .row{
     width: 124px;
 }
 .contact-body{
-    margin-top: 108px;
     padding: 64px 156px;
+    padding-top: 172px;
 }
 .mobile-direction{
     display: none;
@@ -430,7 +435,7 @@ form .row{
     .intro{
         background-size: cover;
         padding-left: 48px;
-        margin-top: 108px;
+        /*padding-top: 172px;*/
     }
     .main-body{
         padding-left: 48px;
@@ -438,26 +443,26 @@ form .row{
     }
     .team-page{
         padding: 64px 64px 64px 64px;
-        margin-top: 108px;
+        /*padding-top: 172px;*/
     }
     .service-body{
         padding: 64px 64px;
-        margin-top: 108px;
+        padding-top: 172px;
     }
     .contact-body{
-        margin-top: 108px;
         padding: 64px 64px;
+        padding-top: 172px;
     }
     .career-page{
         padding: 64px 64px;
-        margin-top: 108px;
+        padding-top: 172px;
     }
     .career{
         padding: 32px 64px;
     }
     .query-body{
         padding: 64px 64px;
-        margin-top: 108px;
+        padding-top: 172px;
     }
 
 }
@@ -474,7 +479,7 @@ form .row{
     .intro{
         background-size: 100% 100%;
         padding-left: 48px;
-        margin-top: 108px;
+        /*padding-top: 152px;*/
     }
     .main-body{
         padding-left: 48px;
@@ -482,27 +487,26 @@ form .row{
     }
     .team-page{
         padding: 64px 64px 64px 64px;
-        margin-top: 108px;
+        /*padding-top: 152px;*/
     }
     .service-body{
         padding: 64px 64px;
-        margin-top: 108px;
+        padding-top: 152px;
     }
     .contact-body{
-        margin-top: 108px;
         padding: 64px 64px;
+        padding-top: 152px;
     }
     .career-page{
         padding: 64px 64px;
-        margin-top: 108px;
+        padding-top: 152px;
     }
     .query-body{
         padding: 64px 64px;
-        margin-top: 108px;
+        padding-top: 152px;
     }
 }
-@media (max-width: 1125px)
-{
+@media (max-width: 1125px){
     .top-info{
         padding: 0 36px;
         width: 100%;
@@ -544,8 +548,6 @@ form .row{
     nav.active ul li{
         width: max-content;
     }
-    
-    
 }
 .dropdown-content-mobile{
     text-align: left;
