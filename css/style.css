@@ -656,8 +656,6 @@ form .row{
     }
     .intro-heading{
         font-size: 22px;
-        line-height: 26px;
-        height: 52px;
     }
     .intro-content{
         font-size: 14px;
@@ -695,13 +693,14 @@ form .row{
     }
     .team-page .col-lg-2 ,.col-lg-4{
         text-align: center;
+        padding: 12px !important; 
     } 
     .member-about{
         font-size: 14px;
     }
     .service-body{
         margin: 0px;
-        padding: 36px 16px 152px 16px;
+        padding: 36px 16px 176px 16px;
     }
     .service-list{
         padding-left: 16px;
