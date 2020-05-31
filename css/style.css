@@ -312,7 +312,8 @@ footer p{
 }
 .member-about{
     font-size: 16px;
-    color: #222222;;
+    color: #222222;
+    margin: 16px 0px;
 }
 .team-contact{
     color: #222222;
