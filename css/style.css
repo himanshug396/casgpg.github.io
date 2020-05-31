@@ -37,6 +37,10 @@ min-height: 100%;
     text-align: center;
     padding: 12px 0px;
     display: none;
+    position: absolute;
+    bottom: 0;
+    height: 194px;
+    width: 100%;
 }
 .mobile-footer p{
     margin: 0px;
@@ -665,6 +669,7 @@ form .row{
     .main-body{
         padding: 36px 16px;
         margin-top: 96px;
+        padding-bottom: 194px;
     }
     .heading{
         font-size: 18px;
@@ -687,6 +692,7 @@ form .row{
     .team-page{
         padding: 36px 16px;
         margin-top: 0px;
+        padding-bottom: 194px;
     }
     .team-about{
         font-size: 14px;
@@ -700,7 +706,7 @@ form .row{
     }
     .service-body{
         margin: 0px;
-        padding: 36px 16px 176px 16px;
+        padding: 36px 16px 256px 16px;
     }
     .service-list{
         padding-left: 16px;
@@ -755,6 +761,7 @@ form .row{
     .contact-body{
         margin-top: 0;
         padding: 64px 16px;
+        padding-bottom: 156px;
     }
     .qrcode1{
         display: none;
@@ -765,6 +772,7 @@ form .row{
     }
     .contact-us .col-sm-8{
         text-align: left;
+        padding-left: 0px !important;
     }
     .mobile-direction{
         display: block;
